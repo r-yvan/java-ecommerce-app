@@ -1,4 +1,5 @@
 package main.java.ecommerce.buyer;
+
 import main.java.ecommerce.User;
 
 public class Buyer extends User {
