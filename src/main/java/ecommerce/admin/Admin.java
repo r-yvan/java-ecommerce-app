@@ -8,7 +8,6 @@ import java.util.List;
 public class Admin extends User {
   private List<Product> allProducts;
   
-  // Constructor
   public Admin(int userId, String name, String email) {
     super(userId, name, email);
     this.allProducts = new ArrayList<>();
@@ -19,13 +18,11 @@ public class Admin extends User {
     System.out.println(name + " is an Admin.");
   }
   
-  // Add a new product to the system
   public void addProduct(Product product) {
     allProducts.add(product);
     System.out.println("Product added: " + product.getName());
   }
   
-  // Remove a product from the system by its ID
   public void removeProduct(int productId) {
     boolean productFound = false;
     for (Product product : allProducts) {
@@ -41,7 +38,6 @@ public class Admin extends User {
     }
   }
   
-  // View all products in the system
   public void viewAllProducts() {
     System.out.println("All Products:");
     for (Product product : allProducts) {

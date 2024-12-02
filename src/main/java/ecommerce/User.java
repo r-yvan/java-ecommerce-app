@@ -11,7 +11,6 @@ public abstract class User {
     this.email = email;
   }
   
-  // Abstract method for user-specific functionality
   public abstract void displayRole();
   
   public String getName() {
