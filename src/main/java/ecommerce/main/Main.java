@@ -13,11 +13,21 @@ public class Main {
   public static void main(String[] args) {
     try (Connection conn = DatabaseConnector.getConnection()) {
       Scanner scanner = new Scanner(System.in);
-      boolean running = true;
       
+      Product product1 = new Product(1, "Laptop", 1200.0, 10);
+      Product product2 = new Product(2, "Smartphone", 800.0, 20);
+      Product product3 = new Product(3, "Tablet", 1400.0, 30);
+      Product product4 = new Product(4, "Wireless Mouse", 600.0, 40);
+      Product product5 = new Product(5, "Desktop Computer", 2000.0, 5);
+      Product product6 = new Product(6, "AirPods Pro 5", 300.0, 90);
+      Product product7 = new Product(7, "PC Stand", 40.0, 200);
+      Product product8 = new Product(8, "Cell Phone", 15.0, 500);
+      Product product9 = new Product(9, "PC Adapter", 50.0, 80);
+      Product product10 = new Product(10, "Ergonomic Keyboard", 20.0, 70);
+      
+      boolean running = true;
       System.out.println("Welcome to the E-Commerce Platform!");
       
-      // Load sellers and their products from the database
       while (running) {
         System.out.println("\nAvailable Sellers:");
         listSellers(conn);
@@ -68,7 +78,7 @@ public class Main {
             
             case "notify-seller":
               System.out.println("Stock is low for some products!");
-              seller.respond("Thanks for notifying! I'll restock soon.");
+              seller.respond("Rubuto Yvan", product1, "Thank You!!" );
               break;
             
             case "buy":
